@@ -223,6 +223,17 @@ PRODUCT_DEXPREOPT_SPEED_APPS += \
 PRODUCT_PROPERTY_OVERRIDES += \
     dalvik.vm.systemuicompilerfilter=speed
 
+# Preopt SystemUI and Settings
+PRODUCT_DEXPREOPT_SPEED_APPS += \
+    SystemUIGoogle \
+    SystemUI \
+    SettingsGoogle \
+    Settings
+
+# Compile SystemUI on device with `speed`.
+PRODUCT_PROPERTY_OVERRIDES += \
+    dalvik.vm.systemuicompilerfilter=speed
+
 # Permissions
 PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/configs/permissions/platform-samsung.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/platform-samsung.xml \
