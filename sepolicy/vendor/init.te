@@ -12,3 +12,7 @@ allow init sysfs_block_writable:file rw_file_perms;
 
 # Allow init to set attribute to sysfs_kcontroller domain
 allow init sysfs_kcontroller:file { setattr };
+
+# Allow init to set attribute to sysfs_kprofiles
+allow init sysfs_kprofiles:file { setattr };
+
